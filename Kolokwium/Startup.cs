@@ -1,4 +1,5 @@
 using Kolokwium.Models;
+using Kolokwium.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -21,9 +22,10 @@ namespace Kolokwium
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<RemizaDbContext>(options => options.UseSqlServer(Configuration["dbConnectionString"]));
+            services.AddScoped<IRemizaDbService, SqlServerRemizaDbService>();
             services.AddControllers();
             services.AddSwaggerGen(config =>
-               config.SwaggerDoc("v1", new OpenApiInfo { Title = "Clinic API", Version = "v1" })
+               config.SwaggerDoc("v1", new OpenApiInfo { Title = "Remiza API", Version = "v1" })
            );
         }
 
