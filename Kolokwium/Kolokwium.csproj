@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>780225b9-bfc7-4b73-8e5f-287999c9744b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="DTOs\Responses\" />
     <Folder Include="DTOs\Requests\" />
-    <Folder Include="Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
